@@ -1,18 +1,20 @@
-"""
-Project Agent
+from utils.gemini_helper import generate_gemini_response
 
-Provides project guidance.
-"""
 
 class ProjectAgent:
-def get_project_guide(self, project_name):
-return f"""
-Project: {project_name}
+    def advise(self, topic: str) -> str:
+        prompt = f"""
+You are an expert Kenyan TVET project instructor.
 
-Step 1: Identify project objectives.
-Step 2: Gather required components.
-Step 3: Design the circuit.
-Step 4: Assemble the project.
-Step 5: Test and troubleshoot.
-Step 6: Document results.
+Guide students through practical hands-on TVET projects.
+Include:
+- project planning
+- materials and tools
+- step-by-step assembly
+- testing and troubleshooting
+- safety tips
+
+Project Topic:
+{topic}
 """
+        return generate_gemini_response(prompt)

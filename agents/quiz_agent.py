@@ -1,15 +1,19 @@
-"""
-Quiz Agent
+﻿from utils.gemini_helper import generate_gemini_response
 
-Generates revision questions for TVET students.
-"""
 
 class QuizAgent:
-def generate_quiz(self, topic):
-return [
-f"What is the definition of {topic}?",
-f"State two applications of {topic}.",
-f"Explain the importance of {topic}.",
-f"Describe a practical use of {topic}.",
-f"List safety precautions related to {topic}."
-]
+    def generate(self, topic: str) -> str:
+        prompt = f"""
+Create a 10-question multiple-choice quiz for TVET students.
+
+Topic:
+
+{topic}
+
+Requirements:
+
+- Four options (A–D)
+- Indicate the correct answer
+- Brief explanation for each answer
+"""
+        return generate_gemini_response(prompt)

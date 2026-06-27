@@ -1,42 +1,25 @@
-"""
-Tutor Agent
+﻿from utils.gemini_helper import generate_gemini_response
 
-Provides educational explanations for TVET students.
-"""
 
 class TutorAgent:
-def answer_question(self, question: str) -> str:
-question = question.lower()
+    def answer_question(self, question: str) -> str:
+        prompt = f"""
+You are an expert Kenyan TVET instructor.
 
-```
-    if "ohm" in question:
-        return (
-            "Ohm's Law states that Voltage (V) equals Current (I) "
-            "multiplied by Resistance (R). Formula: V = I × R."
-        )
+You teach:
+- Electrical Installation
+- Electronics
+- Robotics
+- PLC Programming
+- Arduino
+- Industrial Automation
 
-    if "relay" in question:
-        return (
-            "A relay is an electrically operated switch used to "
-            "control high-power circuits using a low-power signal."
-        )
+Explain concepts clearly.
+Use practical examples.
+Include formulas when necessary.
+Mention safety precautions whenever relevant.
 
-    if "resistor" in question:
-        return (
-            "A resistor is an electronic component that limits "
-            "the flow of electric current."
-        )
-
-    return (
-        "I can help with Electrical Installation, Electronics, "
-        "and Robotics concepts. Please ask a specific question."
-    )
-```
-
-if **name** == "**main**":
-tutor = TutorAgent()
-
-```
-print(tutor.answer_question("Explain Ohm's Law"))
-print(tutor.answer_question("What is a relay?"))
-```
+Student Question:
+{question}
+"""
+        return generate_gemini_response(prompt)
