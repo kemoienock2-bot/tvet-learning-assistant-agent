@@ -1,102 +1,210 @@
-# TVET Learning Assistant Agent
+# ⚡ Kenokip SmartLearn
 
-An AI-powered multi-agent educational assistant designed to help TVET students learn Electrical Installation, Electronics, and Robotics through personalized guidance, quizzes, project support, and career advice.
+**AI-Powered Learning Platform for TVET Students**
 
-## Problem
+Kenokip SmartLearn is an AI-powered educational platform that helps Technical and Vocational Education and Training (TVET) students learn Electrical Installation, Electronics, Robotics, Arduino, PLCs, Industrial Automation, and Electrical Safety through specialized AI assistants.
 
-Many TVET students struggle to access personalized academic support outside the classroom. Technical subjects such as Electrical Installation, Electronics, and Robotics require continuous practice, project guidance, and revision resources that may not always be available.
+---
 
-## Solution
+## 📖 Overview
 
-The TVET Learning Assistant Agent provides 24/7 learning support using multiple specialized AI agents that work together to answer questions, generate assessments, guide projects, and promote safe workshop practices.
+Kenokip SmartLearn provides interactive, AI-assisted learning that supports students, trainees, and instructors with explanations, quizzes, project guidance, engineering calculations, and career advice.
 
-## Features
+The platform is designed to make technical education more accessible, practical, and engaging using Google's Gemini AI.
 
-### Tutor Agent
+---
 
-* Explains electrical installation concepts
+## ✨ Features
+
+### 🤖 AI Tutor
+
+* Explains electrical engineering concepts
 * Teaches electronics fundamentals
 * Supports robotics learning
-* Answers technical questions
+* Answers technical questions step-by-step
 
-### Quiz Agent
+### ⚡ Electrical Expert
 
-* Generates revision questions
-* Creates practice examinations
-* Provides explanations for answers
+* Electrical Installation
+* Circuit analysis
+* Electrical calculations
+* Wiring guidance
+* Industrial electrical systems
 
-### Project Agent
+### 🤖 Robotics Expert
 
-* Guides practical projects
-* Supports Arduino and robotics projects
-* Assists with circuit design
+* Arduino programming
+* ESP32 development
+* Raspberry Pi
+* Sensors and actuators
+* PLC fundamentals
+* Robotics project guidance
 
-### Career Agent
+### 📝 Quiz Generator
 
-* Provides career guidance
-* Helps with CV preparation
-* Suggests learning pathways
+* Practice quizzes
+* Revision questions
+* Exam preparation
+* Answer explanations
 
-### Safety Agent
+### 💼 Career Advisor
 
-* Promotes electrical safety
-* Explains workshop procedures
-* Encourages safe tool handling
+* Career pathways
+* CV guidance
+* Professional development
+* TVET opportunities
 
-## Multi-Agent Architecture
+### 🦺 Safety Advisor
 
-Student Request
-↓
-Coordinator Agent
-├── Tutor Agent
-├── Quiz Agent
-├── Project Agent
-├── Career Agent
-└── Safety Agent
+* Electrical safety
+* Workshop safety
+* PPE guidance
+* Safe working procedures
 
-## Technologies
+### 🛠 Engineering Tools
 
-* Google Agent Development Kit (ADK)
-* Gemini API
+* Ohm's Law Calculator
+* Power Calculator
+* Energy Calculator
+
+### 💬 Smart Chat
+
+* Multiple conversations
+* Chat history
+* New Chat
+* Delete Chat
+
+---
+
+## 🏗 Project Structure
+
+```text
+kenokip-smartlearn/
+│
+├── agents/
+├── tools/
+├── ui/
+├── utils/
+├── assets/
+├── app.py
+├── requirements.txt
+└── README.md
+```
+
+---
+
+## 💻 Technologies
+
 * Python
 * Streamlit
+* Google Gemini API
+* Google GenAI SDK
+* Git
 * GitHub
 
-## Example Questions
+---
 
-* Explain Ohm's Law.
-* Create a quiz on electrical installation.
-* Help me build a line-following robot.
-* Explain the function of a relay.
-* Suggest a robotics learning pathway.
+## 🚀 Installation
 
-## Installation
+Clone the repository:
 
 ```bash
-git clone https://github.com/kemoienock2-bot/tvet-learning-assistant-agent.git
+git clone https://github.com/kemoienock2-bot/kenokip-smartlearn.git
+```
 
-cd tvet-learning-assistant-agent
+Open the project:
 
+```bash
+cd kenokip-smartlearn
+```
+
+Install dependencies:
+
+```bash
 pip install -r requirements.txt
 ```
 
-## Configuration
+Create a `.env` file:
 
-Set your Gemini API key:
-
-```powershell
-$env:GEMINI_API_KEY="YOUR_API_KEY"
+```text
+GEMINI_API_KEY=YOUR_API_KEY
 ```
 
-## Future Improvements
+Run the application:
 
-* Swahili language support
-* Voice interaction
-* TVET curriculum integration
+```bash
+streamlit run app.py
+```
+
+---
+
+## 💡 Example Questions
+
+* Explain Ohm's Law.
+* How do I build a line-following robot?
+* Generate a quiz on PLC programming.
+* Explain how a relay works.
+* Calculate electrical power.
+* Suggest a robotics learning pathway.
+
+---
+
+## 🎯 Roadmap
+
+### Version 1.0 ✅
+
+* AI Tutor
+* Electrical Expert
+* Robotics Expert
+* Quiz Generator
+* Career Advisor
+* Safety Advisor
+* Engineering Calculators
+* Chat History
+
+### Version 1.1
+
+* Improved user interface
+* Better engineering tools
+* Enhanced prompts
+
+### Version 1.2
+
+* Circuit image analysis
+* Arduino code generation
+* PLC programming assistant
+
+### Version 2.0
+
+* Android application
+* Teacher dashboard
 * Student progress tracking
-* Mobile application deployment
+* PDF export
+* Voice interaction
 
-## License
+---
 
-MIT License
+## 🤝 Contributing
+
+Contributions, ideas, bug reports, and feature requests are welcome.
+
+Feel free to fork the project and submit a pull request.
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
+## 👨‍💻 Developer
+
+**Enock Kiplangat**
+
+Technology Education (Electrical and Computer)
+
+Founder of **Kenokip**
+
+**Mission: Empowering Innovation Through Smart Learning**
 
