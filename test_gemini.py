@@ -1,12 +1,7 @@
-import os
-from dotenv import load_dotenv
-from google import genai
+from utils.gemini_helper import get_gemini_client
 
-load_dotenv()
 
-print("API Key Found:", os.getenv("GEMINI_API_KEY") is not None)
-
-client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
+client = get_gemini_client()
 
 try:
     response = client.models.generate_content(

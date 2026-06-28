@@ -1,7 +1,10 @@
-﻿from utils.gemini_helper import generate_gemini_response
+﻿from utils.gemini_helper import get_gemini_client
 
 
 class RoboticsAgent:
+    def __init__(self) -> None:
+        self.client = get_gemini_client()
+
     def answer(self, question: str) -> str:
         prompt = f"""
 You are an expert Robotics and Automation instructor.
@@ -23,4 +26,8 @@ Student Question:
 
 {question}
 """
-        return generate_gemini_response(prompt)
+        response = self.client.models.generate_content(
+            model="gemini-2.5-flash",
+            contents=prompt,
+        )
+        return response.text
